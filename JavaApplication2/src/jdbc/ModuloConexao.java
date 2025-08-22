@@ -1,12 +1,14 @@
 package jdbc;
 
+import java.sql.DriverManager;
 import javax.swing.JOptionPane;
+import java.sql.Connection;
 
 
 
 public class ModuloConexao {
     //criando um método ressponável por estabelecer uma conexão com o banco
-    public static java.sql.Connection conectar() {
+    public static Connection conectar() {
         //criando um método ressponável por estabelecer uma conexão com o banco
 
         java.sql.Connection conexao = null;
@@ -15,7 +17,7 @@ public class ModuloConexao {
         //armazenando informações referente ao banco de dados
         String url = "jdbc:mysql://localhost:3306/dbos2025?characterEncoding=utf-8"; //useTimezone=true&serverTimezone=UTC
         String user = "root";
-        String senha = "IFROOcrxi18$";
+        String senha = "root";
         //estabelecer a conexão com o banco
         try {
             Class.forName(driver);
